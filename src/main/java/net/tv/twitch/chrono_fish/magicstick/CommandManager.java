@@ -11,7 +11,7 @@ public class CommandManager implements CommandExecutor {
         if(sender instanceof Player){
             Player player = (Player) sender;
             if(command.getName().equalsIgnoreCase("li")){
-                MagicManager.strikeLightning(player,player.getLocation());
+                //保留
             }
         }
 
