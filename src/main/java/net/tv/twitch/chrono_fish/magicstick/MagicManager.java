@@ -8,6 +8,10 @@ public class MagicManager {
         player.getWorld().strikeLightning(loc);
     }
 
+    public static void explosion(Player player, Location loc){player.getWorld().createExplosion(
+            getTargetLoc(player),8.0f,false,true
+    );}
+
     public static Location getTargetLoc(Player player){
         return player.getTargetBlock(null,100).getLocation();
     }

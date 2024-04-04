@@ -15,6 +15,11 @@ public class MagicEvent implements Listener {
                 MagicManager.strikeLightning(e.getPlayer(), MagicManager.getTargetLoc(e.getPlayer()));
             }
         }
+        if(e.getAction() == Action.LEFT_CLICK_BLOCK || e.getAction() == Action.LEFT_CLICK_AIR){
+            if(e.getPlayer().getInventory().getItemInMainHand().getType().equals(Material.BLAZE_ROD)){
+                MagicManager.explosion(e.getPlayer(),MagicManager.getTargetLoc(e.getPlayer()));
+            }
+        }
     }
 }
 
