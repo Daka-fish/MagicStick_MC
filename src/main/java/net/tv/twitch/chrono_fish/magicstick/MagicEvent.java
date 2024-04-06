@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 public class MagicEvent implements Listener {
 
     @EventHandler
-    public void onStick(PlayerInteractEvent e){
+    public void onMagic(PlayerInteractEvent e){
         if(e.getAction() == Action.LEFT_CLICK_BLOCK || e.getAction() == Action.LEFT_CLICK_AIR){
             if(e.getPlayer().getInventory().getItemInMainHand().getType().equals(Material.STICK)){
                 MagicManager.strikeLightning(e.getPlayer());
@@ -18,6 +18,11 @@ public class MagicEvent implements Listener {
         if(e.getAction() == Action.LEFT_CLICK_BLOCK || e.getAction() == Action.LEFT_CLICK_AIR){
             if(e.getPlayer().getInventory().getItemInMainHand().getType().equals(Material.BLAZE_ROD)){
                 MagicManager.explosion(e.getPlayer());
+            }
+        }
+        if(e.getAction() == Action.LEFT_CLICK_BLOCK || e.getAction() == Action.LEFT_CLICK_AIR){
+            if(e.getPlayer().getInventory().getItemInMainHand().getType().equals(Material.TORCH)){
+                MagicManager.fireBall(e.getPlayer());
             }
         }
     }
