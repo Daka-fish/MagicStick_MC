@@ -18,7 +18,12 @@ public class MagicManager {
         fireball.setYield(0);
     }
 
+    public static void frameSlash(Player player){
+        player.getInventory().addItem(ItemStackData.getFlameSlash());
+    }
+
     public static Location getTargetLoc(Player player){
         return player.getTargetBlock(null,100).getLocation();
     }
+
 }

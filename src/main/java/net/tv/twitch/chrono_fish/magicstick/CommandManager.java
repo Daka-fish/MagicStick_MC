@@ -12,6 +12,7 @@ public class CommandManager implements CommandExecutor {
             Player player = (Player) sender;
             if(command.getName().equalsIgnoreCase("li")){
                 //保留
+                MagicManager.frameSlash(player);
             }
         }
 
